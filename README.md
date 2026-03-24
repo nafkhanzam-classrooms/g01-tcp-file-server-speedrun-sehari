@@ -4,8 +4,8 @@
 ## Anggota Kelompok
 | Nama           | NRP        | Kelas     |
 | ---            | ---        | ----------|
-|                |            |           |
-|                |            |           |
+| Erica Triana Widyastuti |5025241069|Pemrograman Jaringan-D|
+| Fayza Lathifa Humam         |            |           |
 
 ## Link Youtube (Unlisted)
 Link ditaruh di bawah ini
