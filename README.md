@@ -14,5 +14,14 @@ Link ditaruh di bawah ini
 ```
 
 ## Penjelasan Program
+### 1. server-sync.py
+
+### 2. server-select.py
+
+### 3. server-poll.py
+
+### 4. server-thread.py
+
+### 5. client.py
 
 ## Screenshot Hasil
