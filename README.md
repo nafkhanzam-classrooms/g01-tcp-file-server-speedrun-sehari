@@ -30,11 +30,7 @@ while True:
     conn.close()                     # baru terima next klien
 ```
 
-<<<<<<< HEAD
-Selama inner loop berjalan melayani Client 1, server tidak bisa menerima Client 2. Client 2 hanya bisa masuk ke backlog TCP (karena `server.listen(5)`), dan baru mendapat giliran setelah Client 1 disconnect.
-=======
 Selama loop dalam berjalan melayani Client 1, server tidak bisa menerima Client 2. Client 2 hanya bisa masuk ke backlog TCP (karena `server.listen(5)`), dan baru mendapat giliran setelah Client 1 disconnect.
->>>>>>> ae2f08e
 
 ### 2. server-select.py
 `server-select.py` menggunakan I/O multiplexing melalui `select.select()` untuk menangani banyak klien secara bersamaan tanpa bikin thread atau proses baru, satu thread memonitor semua socket sekaligus dengan`select()`. Server tidak akan block menunggu satu socket tetapi ia hanya memproses socket yang sudah ready. Semua socket aktif disimpan dalam sebuah list:
