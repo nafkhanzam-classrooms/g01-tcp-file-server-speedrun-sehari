@@ -5,7 +5,7 @@
 | Nama           | NRP        | Kelas     |
 | ---            | ---        | ----------|
 | Erica Triana Widyastuti |5025241069|Pemrograman Jaringan-D|
-| Fayza Lathifa Humam         |            |           |
+| Fayza Lathifah Humam         |5025241094|Pemrograman Jaringan-D|
 
 ## Link Youtube (Unlisted)
 Link ditaruh di bawah ini
