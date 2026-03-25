@@ -17,7 +17,7 @@ Link ditaruh di bawah ini
 Program ini mengimplementasikan konsep multi-client TCP file server dengan empat pendekatan concurrency berbeda, beserta satu file client universal. Keempat server memiliki fitur yang sama yaitu broadcast chat, list file, upload, dan download, namun berbeda dalam cara tiap server menangani banyak klien secara bersamaan. Berikut adalah penjelasan tiap file:
 
 ### 1. server-sync.py
-`server_sync.py` adalah implementasi blocking server yang hanya dapat melayani satu klien dalam satu waktu. Server yang di-`accept()` hanya bisa lanjut ke klien berikutnya setelah klien saat ini sudah disconnect. Struktur utama server ini adalah dua nested loop:
+`server_sync.py` adalah implementasi blocking server yang hanya dapat melayani satu klien dalam satu waktu. Server yang di-`accept()` hanya bisa lanjut ke klien berikutnya setelah klien saat ini sudah disconnect. Struktur utama server ini adalah nested loop:
 
 ```python
 while True:                     
@@ -28,10 +28,14 @@ while True:
         if not data: break
         ...
     
-    conn.close()                     # baru setelah ini, terima next klien
+    conn.close()                     # baru terima next klien
 ```
 
+<<<<<<< HEAD
 Selama loop dalam berjalan melayani Client 1, server tidak bisa menerima Client 2. Client 2 hanya bisa masuk ke *backlog* TCP (karena `server.listen(5)`), dan baru mendapat giliran setelah Client 1 disconnect.
+=======
+Selama inner loop berjalan melayani Client 1, server tidak bisa menerima Client 2. Client 2 hanya bisa masuk ke backlog TCP (karena `server.listen(5)`), dan baru mendapat giliran setelah Client 1 disconnect.
+>>>>>>> 74320dc (Small changes on program files)
 
 ### 2. server-select.py
 

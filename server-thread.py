@@ -29,19 +29,19 @@ class ChatAndFileHandler(socketserver.BaseRequestHandler):
                 if not data:
                     break
                 
-                # --- FITUR CHAT / BROADCAST ---
+                # fitur broadcast
                 if data.startswith('CHAT|'):
                     msg = data.split('|', 1)[1]
                     print(f"[{self.client_address}] Chat: {msg}")
                     self.broadcast(f"CHAT|[{self.client_address}] berkata: {msg}")
                     
-                # --- FITUR LIST FILE ---
+                # fitur list file
                 elif data.startswith('LIST|'):
                     files = os.listdir(SERVER_FOLDER)
                     file_list = ", ".join(files) if files else "Folder kosong"
                     self.request.sendall(f"CHAT|File di server: {file_list}".encode('utf-8'))
                     
-                # --- FITUR UPLOAD ---
+                # fitur iplaod file
                 elif data.startswith('UPLOAD|'):
                     parts = data.split('|')
                     filename = parts[1]
@@ -59,14 +59,14 @@ class ChatAndFileHandler(socketserver.BaseRequestHandler):
                     print(f"[UPLOAD] {filename} berhasil diupload oleh {self.client_address}")
                     self.broadcast(f"CHAT|{self.client_address} baru saja mengupload file '{filename}'")
                     
-                # --- FITUR DOWNLOAD ---
+                # fitur download
                 elif data.startswith('DOWNLOAD|'):
                     filename = data.split('|')[1]
                     filepath = os.path.join(SERVER_FOLDER, filename)
                     
                     if os.path.exists(filepath):
                         filesize = os.path.getsize(filepath)
-                        # Kirim header FILE ke klien
+                        # Kirim header file ke klien
                         self.request.sendall(f"FILE|{filename}|{filesize}".encode('utf-8'))
                         
                         # Kirim isi file

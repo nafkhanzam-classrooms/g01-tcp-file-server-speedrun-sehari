@@ -3,7 +3,7 @@ import select
 import os
 import sys
 
-# Pengecekan OS
+# Pengecekan OS (karena hanya bisa untuk linux)
 if not hasattr(select, 'poll'):
     print("Error: OS ini (Windows) tidak mendukung select.poll(). Gunakan Linux/Mac/WSL.")
     sys.exit()
