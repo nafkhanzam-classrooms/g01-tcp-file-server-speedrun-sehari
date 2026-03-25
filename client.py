@@ -24,7 +24,7 @@ def receive_messages(sock):
                 print(f"\n[Server/Broadcast] {data.split('|', 1)[1]}")
             
             elif data.startswith('FILE|'):
-                # Format: FILE|namafile.txt|ukuran
+                # Format: FILE|namafile|ukuran
                 parts = data.split('|')
                 filename = parts[1]
                 filesize = int(parts[2])

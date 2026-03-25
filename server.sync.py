@@ -30,7 +30,7 @@ def start_server():
                     msg = data.split('|', 1)[1]
                     print(f"[{addr}] Chat: {msg}")
                     # Hanya ada 1 klien, tidak ada yang bisa di-broadcast
-                    # Kita echo kembali ke klien yang sama sebagai konfirmasi
+                    # Echo kembali ke klien yang sama
                     conn.sendall(f"CHAT|Server Echo: {msg}".encode('utf-8'))
                     
                 elif data.startswith('LIST|'):

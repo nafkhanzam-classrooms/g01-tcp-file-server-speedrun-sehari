@@ -12,7 +12,7 @@ if not os.path.exists(SERVER_FOLDER):
 
 def broadcast(message, sender_sock, sockets_list):
     for sock in sockets_list:
-        if sock != sender_sock and sock.fileno() != -1: # Jangan kirim ke server socket & sender
+        if sock != sender_sock and sock.fileno() != -1: # Jangan kirim ke server socket dan sender
             try:
                 sock.sendall(message.encode('utf-8'))
             except:
