@@ -33,12 +33,6 @@ while True:
 
 Selama loop dalam berjalan melayani Client 1, server tidak bisa menerima Client 2. Client 2 hanya bisa masuk ke *backlog* TCP (karena `server.listen(5)`), dan baru mendapat giliran setelah Client 1 disconnect.
 
-### Konsekuensi
-
-- Tidak ada broadcast yang berarti — saat hanya ada satu klien aktif, server hanya bisa echo pesan kembali ke pengirimnya sendiri.
-- Cocok digunakan untuk debugging, testing logika protokol, atau skenario di mana memang hanya ada satu pengguna pada satu waktu.
-- Ini adalah baseline untuk memahami kenapa concurrency dibutuhkan.
-
 ### 2. server-select.py
 
 ### 3. server-poll.py
