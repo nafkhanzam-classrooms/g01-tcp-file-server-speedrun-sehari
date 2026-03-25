@@ -172,10 +172,17 @@ Untuk transfer file, client mengirim header terlebih dahulu (`UPLOAD|nama|ukuran
 
 ## Screenshot Hasil
 ### Hasil server-sync.py
-
+Server: ![](assets/sync-server.png)
+Client: ![](assets/sync-client.png)
 
 ### Hasil server-select.py
+Server: ![](assets/select-server.png)
+Client: ![](assets/select-client.png)
 
 ### Hasil server-poll.py
+Server: ![](assets/poll-server.png)
+Client: ![](assets/poll-client.png)
 
 ### Hasil server-thread.py
+Server: ![](assets/thread-server.png)
+Client: ![](assets/thread-client.png)
