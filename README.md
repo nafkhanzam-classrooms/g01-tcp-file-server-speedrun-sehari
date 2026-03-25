@@ -8,9 +8,7 @@
 | Fayza Lathifah Humam         |5025241094|Pemrograman Jaringan-D|
 
 ## Link Youtube (Unlisted)
-```
-https://youtu.be/sHhRsaQhvG8?si=lTuOZTIOEV8noHN4
-```
+[Link ke Video](https://youtu.be/sHhRsaQhvG8?si=lTuOZTIOEV8noHN4)
 
 ## Penjelasan Program
 Program ini mengimplementasikan konsep multi-client TCP file server dengan empat pendekatan concurrency berbeda, beserta satu file client universal. Keempat server memiliki fitur yang sama yaitu broadcast chat, list file, upload, dan download, namun berbeda dalam cara tiap server menangani banyak klien secara bersamaan. Berikut adalah penjelasan tiap file:
